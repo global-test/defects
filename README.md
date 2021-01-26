@@ -79,7 +79,7 @@
 ### Пример: ``var slope_ausp = ausp.get_slope(0);``
 
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <hr>
 <hr>
