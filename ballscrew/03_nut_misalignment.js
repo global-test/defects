@@ -48,8 +48,8 @@ function diagnostic()																			//функция диагностики
 	}
 	
 
-	var cnt_harms_ausp = ausp.get_cnt_harms(1);											//получение кол-ва гармоник присутствующих на автоспектре. параметр "2" - допустимое кол-во пропусщенных в ряду. 
-	var cnt_harms_spen = spen.get_cnt_harms(1);											//получение кол-ва гармоник присутствующих на спектре огибающей.
+	var cnt_harms_ausp = ausp.get_cnt_harms(1, 1);          //получение кол-ва гармоник присутствующих на автоспектре. 1-параметр с какой ищем, второй - допустимое кол-во пропусщенных в ряду. 
+	var cnt_harms_spen = spen.get_cnt_harms(1, 1);
 
 	if (cnt_harms_ausp >= 1 && cnt_harms_spen >= 1)                                 	//реализация логики подтверждения дефекта
 	{
@@ -61,5 +61,5 @@ function diagnostic()																			//функция диагностики
 		comment = "повторить измерение";															//добавлен комментарий
 	}
 
-	return_result(is_defect, comment);
+	return_result(is_defect, 1, comment);
 } 

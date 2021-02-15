@@ -2,6 +2,9 @@ function init()																			//функция инициализации
 {
 	name = "биение винта_";																	//задание имени дефекта
 	add_color(0xff00ff00, "Fвнт");														//добавлнение колорбокса. первый параметр - цвет, второй - текст
+
+	ausp.set_color(0xffffff00);                     //задаем цвет спектра
+	spen.set_color(0xffff00ff);
 }
 
 function display()																			//функция отображения
@@ -12,8 +15,7 @@ function display()																			//функция отображения
 
     console.log("freq: " + freq);
 
-
-    ausp.set_options(1000, 1000, 5, 15);         //задаем параметры спектра. первый параетр - частотный диапазон, второй - кол-во точек спектра, третий - кол-во усреднений, четверный - сглаживание желтой линии
+    ausp.set_options(1000, 1000, 5, 15);         //задаем параметры спектра. первый параметр - частотный диапазон, второй - кол-во точек спектра, третий - кол-во усреднений, четверный - сглаживание желтой линии
     spen.set_options(1000, 1000, 5, 25);
 
 
@@ -38,8 +40,8 @@ function diagnostic()																			//функция диагностики
 	console.log("  ############ биение винта ############");
 	console.log("### " + ausp.signal_name() + " ###");
 
-	var cnt_harms_ausp = ausp.get_cnt_harms(2);											//получение кол-ва гармоник присутствующих на автоспектре. параметр "2" - допустимое кол-во пропусщенных в ряду. 
-	var cnt_harms_spen = spen.get_cnt_harms(2);											//получение кол-ва гармоник присутствующих на спектре огибающей.
+	var cnt_harms_ausp = ausp.get_cnt_harms(1, 2);											//получение кол-ва гармоник присутствующих на автоспектре. 1-параметр с какой ищем, второй - допустимое кол-во пропусщенных в ряду. 
+	var cnt_harms_spen = spen.get_cnt_harms(1, 2);
 
 	console.log(cnt_harms_ausp);
 	console.log(cnt_harms_spen);
@@ -56,5 +58,5 @@ function diagnostic()																			//функция диагностики
 
 	console.log(is_defect + ", " + comment);
 
-	return_result(is_defect, comment);
+	return_result(is_defect, 1, comment);
 } 

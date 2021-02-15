@@ -36,5 +36,5 @@ function diagnostic()																			//функция диагностики
 		comment = "повторить измерение";															//добавлен комментарий
 	}
 
-	return_result(is_defect, comment);
+	return_result(is_defect, 1, comment);
 } 
