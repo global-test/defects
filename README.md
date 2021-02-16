@@ -107,7 +107,7 @@ function diagnostic() {
 3. Глобальные переменные:<br>
 + [freq](#freq)
 
-4. Глобальные объекты:<br>
+4. [Глобальные объекты](#global_objects)
 
 + [signal](#signal)
 + [ausp, ausp_hf, spen и spen_hf](#spectrs)
@@ -182,7 +182,7 @@ function diagnostic() {
 
 <hr><br><br>
 
-# 4. Глобальные объекты
+# <a name="global_objects"></a>4. Глобальные объекты
 Глобальные объекты доступны в любой части скрипта.
 
 <br><br>
