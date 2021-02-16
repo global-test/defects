@@ -96,20 +96,27 @@ function diagnostic() {
 <br>
 <br>
 1. Глобальные функции:<br>
+
 + [get_parametr](#Getparament)
 + [add_color](#Addcolor)
+
 <br>
 <br>
 2. Глобальные объекты:<br>
+
 + [signal](#Signal)
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
+
 <br>
 <br>
 2.1. Методы настройки глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
+
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
+
 <br>
 <br>
 2.2. Методы выборки данных из глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
+
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
 
 
