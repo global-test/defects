@@ -104,12 +104,14 @@ function diagnostic() {
 + [return_result](#return_result)
 + [console.log](#console.log)
 
-3. Глобальные объекты:<br>
+3. Глобальные переменные:<br>
++ [freq](#freq)
+
+4. Глобальные объекты:<br>
 
 + [signal](#signal)
 + [ausp, ausp_hf, spen и spen_hf](#spectrs)
 
-3.1. Методы настройки глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
 + [set_options](#set_options)
 + [add](#add)
@@ -119,7 +121,6 @@ function diagnostic() {
 + [add_hump](#add_hump)
 + [set_filter](#set_filter)
 
-3.2. Методы выборки данных из глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
 + [get_cnt_harms](#get_cnt_harms)
 + [is_harms_declay](#is_harms_declay)
@@ -136,13 +137,14 @@ function diagnostic() {
 <hr><br><br>
 
 # 2. Глобальные функции
+Глобальные функции доступны в любой части скрипта.
 ## <a name="get_parametr"></a>Глобальная функция ``get_parametr(PARAMETR_NAME)``
 Может применяться во всех функциях скрипта. Предназначена для получения значения параметра из элемента ``r_elemet`` (из конфигурации объекта). Параметр ``PARAMETR_NAME`` - строковая переменная.
 ### Пример: ``var d_inner = get_parameter("internalD");``
 
 <hr><br><br>
 
-# <a name="add_color"></a>Глобальная функция ``add_color(COLOR, LABEL)`` 
+## <a name="add_color"></a>Глобальная функция ``add_color(COLOR, LABEL)`` 
 Применяется в функции ``init``. Предназначена для добавления колор-бокса. Параметр``COLOR`` - цвет, ``LABEL`` - обозначение колор-бокса в приложении GTLd.
 ### Пример: ``add_color(0xff00ff00, "Fвр");``
 
