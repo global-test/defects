@@ -92,9 +92,11 @@ function diagnostic() {
 }
 ```
 
-+ [Директива IMPORT](#import)
+1. Директивы:<br>
 
-1. Глобальные функции:<br>
++ [import](#import)
+
+2. Глобальные функции:<br>
 
 + [get_parametr](#get_parament)
 + [add_color](#add_color)
@@ -102,17 +104,16 @@ function diagnostic() {
 + [return_result](#return_result)
 + [console.log](#console.log)
 
-
-2. Глобальные объекты:<br>
+3. Глобальные объекты:<br>
 
 + [signal](#Signal)
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
 
-2.1. Методы настройки глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
+3.1. Методы настройки глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
 
-2.2. Методы выборки данных из глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
+3.2. Методы выборки данных из глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
 + [ausp, ausp_hf, spen и spen_hf](#Spectrs)
 
