@@ -92,8 +92,8 @@ function diagnostic() {
 }
 ```
 
-1. [Директивы](#dir):
-  * [import](#import) 
+1. [Директивы](#dir)
+    * [import](#import) 
 
 2. [Глобальные методы](#global_methods):
   + [get_parametr](#get_parament)
