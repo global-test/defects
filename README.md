@@ -14,6 +14,92 @@
 
 <hr>
 
+## Пример скрипта 01_screw_runout.js
+
+```
+import "service.js";
+
+function init() {
+  // Функция инициализации
+
+  // Задание имени дефекта
+  set_name("биение винта");
+
+  // Добавлнение колорбокса. первый параметр - цвет, второй - текст
+  add_color(0xff00ff00, "Fвнт");
+
+  std_log_init();
+}
+
+function display() {
+  // Конфигурация портретов
+  // Задаем параметры спектра.
+  // Первый параметр - частотный диапазон,
+  // Второй - кол-во точек спектра,
+  // Третий - кол-во усреднений,
+  // Четвертый - сглаживание желтой линии
+  ausp.set_options(1000, 1000, 5, 15);
+  spen.set_options(1000, 1000, 5, 25);
+
+  // Задаем частоту фильтра спектра огибающей
+  var fc = 2000 * Math.sqrt(freq);
+  spen.set_filter(fc, (fc * 2) / 3);
+
+  // Добавление гармоник на автоспектр.
+  // Первый параметр - частота, второй - вес,
+  // Третий толщнина линии,
+  // Четвертый - индек колорбокса, задающего цвет.
+  for (i = 1; i <= 7; i++) ausp.harms.add(i * freq, 1, 1, 0);
+  for (i = 1; i <= 9; i++) spen.harms.add(i * freq, 1, 1, 0);
+
+  std_log_display();
+}
+
+function diagnostic() {
+  // Функция диагностики
+
+  // Инициализация переменных, содержащих результат диагностики
+  var is_defect = false;
+  var comment = "";
+
+  // Извлечение кол-ва гармоник присутствующих на автоспектре.
+  // Параметр - допустимое кол-во пропущенных гармоник в ряду.
+  var cnt_harms_ausp = ausp.get_cnt_harms(2);
+  console.log("AUSP harms count: " + cnt_harms_ausp);
+
+  // Извлечение кол-ва гармоник присутствующих на спектре огибающей.
+  // Параметр - допустимое кол-во пропущенных гармоник в ряду.
+  var cnt_harms_spen = spen.get_cnt_harms(2);
+  console.log("SPEN harms count: " + cnt_harms_spen);
+
+  if (
+    cnt_harms_ausp >= 3 &&
+    cnt_harms_ausp <= 7 &&
+    cnt_harms_spen >= 3 &&
+    cnt_harms_spen <= 9
+  ) {
+    // реализация логики подтверждения дефекта
+    // true - дефект обнаружен
+    // false - дефект не обнаружен
+    is_defect = true;
+  } else if (
+    cnt_harms_ausp >= 1 &&
+    cnt_harms_ausp <= 2 &&
+    cnt_harms_spen >= 1 &&
+    cnt_harms_spen <= 2
+  ) {
+    is_defect = true;
+
+    // добавлен комментарий
+    comment = "повторить измерение";
+  }
+
+  std_log_diagnostic(is_defect, comment);
+  return_result(is_defect, comment);
+}
+```
+<hr>
+
 ### Глобальная функция ``get_parametr(PARAMETR_NAME)``
 Может применяться во всех функциях скрипта. Предназначена для получения значения параметра из элемента ``r_elemet`` (из конфигурации объекта). Параметр ``PARAMETR_NAME`` - строковая переменная.
 ### Пример: ``var d_inner = get_parameter("internalD");``
