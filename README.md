@@ -93,7 +93,7 @@ function diagnostic() {
 ```
 
 1. Директивы:
-+ [import](#import)
+  * [import](#import) 
 
 2. Глобальные методы:
   + [get_parametr](#get_parament)
