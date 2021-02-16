@@ -1,11 +1,7 @@
 # DEFECTS - подпроект GTLd
 
-Предназначен для описания дефектов.
+Предназначен для описания дефектов. Язык JavaScript. 
 
-## Документация API
-Язык JavaScript. 
-
- 
 ## Структура API
 
 Файл описания дефекта ```*.js``` должен содержать три обязательных функции:
@@ -97,6 +93,8 @@ function diagnostic() {
 ```
 
 + [Директива IMPORT](#Import);
+Глобальные функции:
++ [get_parametr](#Getparament);
 
 <hr>
 
@@ -106,7 +104,7 @@ function diagnostic() {
 
 <hr>
 
-### Глобальная функция ``get_parametr(PARAMETR_NAME)``
+### <a name="Getparament"></a> Глобальная функция ``get_parametr(PARAMETR_NAME)``
 Может применяться во всех функциях скрипта. Предназначена для получения значения параметра из элемента ``r_elemet`` (из конфигурации объекта). Параметр ``PARAMETR_NAME`` - строковая переменная.
 ### Пример: ``var d_inner = get_parameter("internalD");``
 <br><br>
