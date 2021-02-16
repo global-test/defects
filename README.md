@@ -103,15 +103,17 @@ function diagnostic() {
     + [return_result](#return_result)
     + [console.log](#console.log)
 4. [Глобальные объекты](#global_objects)
-    4.1 [signal](#signal) 
-    4.2 [ausp, ausp_hf, spen и spen_hf](#spectrs) 
-+ [set_options](#set_options)
+    * 4.1 [signal](#signal) 
+    * 4.2 [ausp, ausp_hf, spen и spen_hf](#spectrs) 
+        * 4.2.1 Общие методы объектов спектров
+            + [set_options](#set_options)
+            + [set_filter](#set_filter)
+
 + [add](#add)
 + [add_modulated](#add_modulated)
 + [set_declay](#set_declay)
 + [add_slope](#add_slope)
 + [add_hump](#add_hump)
-+ [set_filter](#set_filter)
 
 
 + [get_cnt_harms](#get_cnt_harms)
