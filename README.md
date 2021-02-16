@@ -106,17 +106,25 @@ function diagnostic() {
 
 3. Глобальные объекты:<br>
 
-+ [signal](#Signal)
-+ [ausp, ausp_hf, spen и spen_hf](#Spectrs)
++ [signal](#signal)
++ [ausp, ausp_hf, spen и spen_hf](#spectrs)
 
 3.1. Методы настройки глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
-+ [ausp, ausp_hf, spen и spen_hf](#Spectrs)
++ [set_options](#set_options)
++ [add](#add)
++ [add_modulated](#add_modulated)
++ [set_declay](#set_declay)
++ [add_slope](#add_slope)
++ [add_hump](#add_hump)
++ [set_filter](#set_filter)
 
 3.2. Методы выборки данных из глобальных объектов ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``:<br>
 
-+ [ausp, ausp_hf, spen и spen_hf](#Spectrs)
-
++ [get_cnt_harms](#get_cnt_harms)
++ [is_harms_declay](#is_harms_declay)
++ [get_slope](#get_slope)
++ [get_hump](#get_hump)
 
 <hr>
 
@@ -149,14 +157,14 @@ function diagnostic() {
 
 <hr>
 
-### Глобальные объект ``signal``
+### <a name="signal"></a>Глобальные объект ``signal``
 Этот объект предназначен для получения данных об исследуемом сигнале из приложения GTLd. Поддерживает следующие методы:
 * ``.get_name()`` - возвращает имя исследуемого сигнала; 
 * ``.is_magnetic()`` - возвращает логическую переменную, означающую что датчик закреплён на магните (``true``) или нет (``false``);
 
 <hr>
 
-### Глобальные объекты ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``
+### <a name="spectrs"></a>Глобальные объекты ``ausp``, ``ausp_hf``, ``spen`` и ``spen_hf``
 Эти объекты предназначены для взаимодействия со спектрами обрабатываемого сигнала: 
 * ``ausp`` - автоспектр; 
 * ``ausp_hf`` - автоспектр выскокочастотный; 
