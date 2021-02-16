@@ -92,12 +92,16 @@ function diagnostic() {
 }
 ```
 
-+ [Директива IMPORT](#Import)
++ [Директива IMPORT](#import)
 
 1. Глобальные функции:<br>
 
-+ [get_parametr](#Getparament)
-+ [add_color](#Addcolor)
++ [get_parametr](#get_parament)
++ [add_color](#add_color)
++ [set_name](#set_name)
++ [return_result](#return_result)
++ [console.log](#console.log)
+
 
 2. Глобальные объекты:<br>
 
@@ -115,30 +119,30 @@ function diagnostic() {
 
 <hr>
 
-### <a name="Import"></a> Директива ``import`` 
+### <a name="import"></a> Директива ``import`` 
 Применяется для подключения дополнительных JS файлов.
 ### Пример: ``import "service.js";``
 
 <hr>
 
-### <a name="Getparament"></a> Глобальная функция ``get_parametr(PARAMETR_NAME)``
+### <a name="get_parament"></a> Глобальная функция ``get_parametr(PARAMETR_NAME)``
 Может применяться во всех функциях скрипта. Предназначена для получения значения параметра из элемента ``r_elemet`` (из конфигурации объекта). Параметр ``PARAMETR_NAME`` - строковая переменная.
 ### Пример: ``var d_inner = get_parameter("internalD");``
 <br><br>
-### <a name="Addcolor"></a> Глобальная функция ``add_color(COLOR, LABEL)`` 
+### <a name="add_color"></a> Глобальная функция ``add_color(COLOR, LABEL)`` 
 Применяется в функции ``init``. Предназначена для добавления колор-бокса. Параметр``COLOR`` - цвет, ``LABEL`` - обозначение колор-бокса в приложении GTLd.
 ### Пример: ``add_color(0xff00ff00, "Fвр");``
 <br><br>
-### Глобальная функция ``set_name(NAME)``
+### <a name="set_name"></a> Глобальная функция ``set_name(NAME)``
 Применяется в функции ``init`` для установки имени дефекта, данное имя идентифицирует дефект в приложении GTLd. Параметр ``NAME`` - строковая переменная.
 ### Пример: ``set_name("перекос вала");``
 <br><br>
-### Глобальная функция ``return_result(IS_DEFECT, COMMENT)``
+### <a name="return_result"></a> Глобальная функция ``return_result(IS_DEFECT, COMMENT)``
 Применяется в функции ``diagnoctic()`` для передачи в приложение GTLd результаты диагностики, должна быть вызвана после формирования диагноза, в данную функцию передаётся результат диагностики в виде параметров:
 ``IS_DEFECT`` логическая переменная, передается ``true`` или ``false`` в зависимости от того, обнаружен или нет дефект, ``COMMENT`` строковая переменная, предназначена для передачи комментария.
 ### Пример: ``return_result(true, "дефект ярко выражен");``
 <br><br>
-### Глобальная функция ``console.log(TEXT)``
+### <a name="console.log"></a> Глобальная функция ``console.log(TEXT)``
 Может применяться во всех функциях скрипта. Предназначена записи отладочной информации в лог-файл. ``TEXT`` - строковая переменная.
 ### Пример: ``console.log("Завершена инициализация");``
 
