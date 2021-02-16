@@ -93,14 +93,13 @@ function diagnostic() {
 ```
 
 1. [Директивы](#dir)
-    * [import](#import) 
-
+    + [import](#import) 
 2. [Глобальные методы](#global_methods):
-  + [get_parametr](#get_parament)
-  + [add_color](#add_color)
-  + [set_name](#set_name)
-  + [return_result](#return_result)
-  + [console.log](#console.log)
+    + [get_parametr](#get_parament)
+    + [add_color](#add_color)
+    + [set_name](#set_name)
+    + [return_result](#return_result)
+    + [console.log](#console.log)
 
 3. Глобальные переменные:<br>
 + [freq](#freq)
