@@ -100,9 +100,9 @@ function diagnostic() {
 ```
 <hr>
 
-### Директива import 
+### Директива ``import`` 
 Применяется для подключения дополнительных JS файлов.
-### Пример: ``import "service.js";
+### Пример: ``import "service.js";``
 
 <hr>
 
