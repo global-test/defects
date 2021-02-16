@@ -126,9 +126,10 @@ function diagnostic() {
 + [get_slope](#get_slope)
 + [get_hump](#get_hump)
 
-<hr>
+<hr><br><br>
 
-# <a name="import"></a>Директива ``import`` 
+# 1. Директивы
+## <a name="import"></a>Директива ``import`` 
 Применяется для подключения дополнительных JS файлов.
 ### Пример: ``import "service.js";``
 
