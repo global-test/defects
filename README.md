@@ -98,11 +98,11 @@ function diagnostic() {
 
 2. Глобальные методы:<br>
 
-+ [get_parametr](#get_parament)
-+ [add_color](#add_color)
-+ [set_name](#set_name)
-+ [return_result](#return_result)
-+ [console.log](#console.log)
+  + [get_parametr](#get_parament)
+  + [add_color](#add_color)
+  + [set_name](#set_name)
+  + [return_result](#return_result)
+  + [console.log](#console.log)
 
 3. Глобальные переменные:<br>
 + [freq](#freq)
