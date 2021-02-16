@@ -96,15 +96,15 @@ function diagnostic() {
     + [import](#import) 
 2. [Глобальные переменные](#global_variables)
     + [freq](#freq)
-3. [Глобальные методы](#global_methods):
+3. [Глобальные методы](#global_methods)
     + [get_parametr](#get_parametr)
     + [add_color](#add_color)
     + [set_name](#set_name)
     + [return_result](#return_result)
     + [console.log](#console.log)
 4. [Глобальные объекты](#global_objects)
-    4.1. [signal](#signal)
-    4.2. [ausp, ausp_hf, spen и spen_hf](#spectrs)
+    4.1. [signal](#signal) 
+    4.2. [ausp, ausp_hf, spen и spen_hf](#spectrs) 
 
 
 + [set_options](#set_options)
