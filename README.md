@@ -92,9 +92,11 @@ function diagnostic() {
 }
 ```
 
-+ [Директива IMPORT](#Import);
++ [Директива IMPORT](#Import)<br>
 Глобальные функции:
-+ [get_parametr](#Getparament);
++ [get_parametr](#Getparament)
++ [add_color](#Addcolor)
+
 
 <hr>
 
@@ -108,7 +110,7 @@ function diagnostic() {
 Может применяться во всех функциях скрипта. Предназначена для получения значения параметра из элемента ``r_elemet`` (из конфигурации объекта). Параметр ``PARAMETR_NAME`` - строковая переменная.
 ### Пример: ``var d_inner = get_parameter("internalD");``
 <br><br>
-### Глобальная функция ``add_color(COLOR, LABEL)`` 
+### <a name="Addcolor"></a> Глобальная функция ``add_color(COLOR, LABEL)`` 
 Применяется в функции ``init``. Предназначена для добавления колор-бокса. Параметр``COLOR`` - цвет, ``LABEL`` - обозначение колор-бокса в приложении GTLd.
 ### Пример: ``add_color(0xff00ff00, "Fвр");``
 <br><br>
