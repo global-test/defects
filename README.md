@@ -133,7 +133,7 @@ function diagnostic() {
 
 <hr><br><br>
 
-#<a href="global_variables"></a>2. Глобальные переменные
+# <a href="global_variables"></a>2. Глобальные переменные
 Глобальные переменные доступны в любой части скрипта.
 
 <br><br>
