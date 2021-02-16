@@ -92,13 +92,11 @@ function diagnostic() {
 }
 ```
 
-1. Директивы:<br>
-
+1. Директивы:
 + [import](#import)
 
-2. Глобальные методы:<br>
-
-..+ [get_parametr](#get_parament)
+2. Глобальные методы:
+  + [get_parametr](#get_parament)
   + [add_color](#add_color)
   + [set_name](#set_name)
   + [return_result](#return_result)
