@@ -57,12 +57,12 @@ function diagnostic() {
 
   // Извлечение кол-ва гармоник присутствующих на автоспектре.
   // Параметр - допустимое кол-во пропущенных гармоник в ряду.
-  var cnt_harms_ausp = ausp.get_cnt_harms(2);
+  var cnt_harms_ausp = ausp.harms[0].get_cnt_harms(2);
   console.log("AUSP harms count: " + cnt_harms_ausp);
 
   // Извлечение кол-ва гармоник присутствующих на спектре огибающей.
   // Параметр - допустимое кол-во пропущенных гармоник в ряду.
-  var cnt_harms_spen = spen.get_cnt_harms(2);
+  var cnt_harms_spen = spen.harms[0].get_cnt_harms(2);
   console.log("SPEN harms count: " + cnt_harms_spen);
 
   if (
