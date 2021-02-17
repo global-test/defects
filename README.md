@@ -262,7 +262,7 @@ function diagnostic() {
 
 <hr><br><br>
 
-## <a name="harms_output"></a>Методы извлечения результатов из ``harams[]``
+## <a name="harms_output"></a>Методы извлечения результатов из ``harms[]``
 ## <a name="get_cnt_harms"></a>Метод ``.harms[N].get_cnt_harms(I)``
 Возвращает количество гармоник, присутствующих на спектре. Параметр ``N`` задаёт индекс набора гармоник. Параметр ``I`` - допустимое количество пропущенных гармоник в ряду.
 ### Пример: ``var cnt_harms_ausp = ausp.harms[1].get_cnt_harms(2);`` 
