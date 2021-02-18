@@ -14,7 +14,8 @@ function display()																			//функция отображения
 {
     console.log("### биение винта ###");
     console.log("### display ###");
-    console.log("### " + ausp.signal_name() + " ###");
+    console.log("### " + signal.get_name() + " ###");
+    console.log("is_magnetic: " + signal.is_magnetic());
 
     console.log("freq: " + freq);
 
