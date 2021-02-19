@@ -42,7 +42,7 @@ function diagnostic()																			//функция диагностики
 
 	console.log("############### diagnostic ###############");
 	console.log("  ############ биение винта ############");
-	console.log("### " + ausp.signal_name() + " ###");
+	console.log("### " + signal.get_name() + " ###");
 
 	var cnt_harms_ausp = ausp.get_cnt_harms(0, 1, 2);											//получение кол-ва гармоник присутствующих на автоспектре. 1 параметр - индекс набора гармоник, 2 параметр - с какой гармоники ищем, 3 - допустимое кол-во пропусщенных в ряду. 
 	var cnt_harms_spen = spen.get_cnt_harms(0, 1, 2);

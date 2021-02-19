@@ -8,15 +8,23 @@ function init()																			//функция инициализации
 
 	ausp.set_color(0xffffff00);                     //задаем цвет спектра
 	ausp.set_harms_series_count(1);     //задаем кол-во наборов гармоник для автостпектра
+	ausp_hf.set_humps_count(1);     //задаем кол-во диапазонов поиска горбов;
 
 	spen.set_color(0xffff00ff);
 	spen.set_harms_series_count(1);
+	spen_hf.set_humps_count(1);
+
+	
+	
 }
 
 function display()																			//функция отображения
 {
     ausp.set_options(1000, 1000, 5, 15);         //задаем параметры спектра
     spen.set_options(1000, 1000, 5, 25);
+
+    ausp_hf.set_options(8000, 1000, 5, 15);         //задаем параметры спектра
+    spen_hf.set_options(8000, 1000, 5, 25);
 
     var fc = 2000 * math.sqrt(freq);
     spen.set_filter(fc, fc * 2 / 3); //задаем частоту фильра спекта огибающей
@@ -30,8 +38,8 @@ function display()																			//функция отображения
     ausp.harms[0].decay = -0.05                                                                //задаем спад
     spen.harms[0].decay = -0.05
 
-    ausp_hf.humps.add(5000, 10000, 0);                                                            //задаем диапазоны поиска горбов. первые два параметра - частотный диапазон, третие - индекс цвета
-    spen_hf.humps.add(5000, 10000, 0);
+    ausp_hf.humps[0].set(5000, 10000, 0);                                                            //задаем диапазоны поиска горбов. первые два параметра - частотный диапазон, третий - индекс цвета.
+    spen_hf.humps[0].set(5000, 10000, 0);
 }
 
 
