@@ -26,8 +26,9 @@ function display()																			//функция отображения
         spen.harms[0].add(i * f_nut, 1, 0);													//добавление гармоник на спектр огибающей. harms_spen - список отображаемых на спектре огибающей гармоник.
     }
 
-    ausp.harms[0].decay = -0.05                                                                //задаем спад
-    spen.harms[0].decay = -0.05
+    ausp.harms[0].decay = -0.05;                                                                //задаем спад
+    //spen.harms[0].decay = -0.05
+    spen.harms[0].set_decay(-0.05);
 }
 
 
