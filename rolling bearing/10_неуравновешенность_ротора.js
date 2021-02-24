@@ -47,7 +47,7 @@ function display() {
   for (i = 1; i <= 1; i++) ausp.harms[0].add(i * freq, 1, 1, 0);
   for (i = 1; i <= 2; i++) spen.harms[0].add(i * freq, 1, 1, 0);
 
-  spen.harms[0].set_decay(-0.05);
+  spen.harms[0].set_decay(-0.01);
 
   std_log_display();
 }
@@ -63,10 +63,10 @@ function diagnostic() {
   // 1 - индекс набора гармоник,
   // 2 - с какой гармоники ищем,
   // 3 - допустимое кол-во пропусщенных в ряду.
-  var cnt_harms_ausp = ausp.get_cnt_harms(0, 1, 1);
+  var cnt_harms_ausp = ausp.get_cnt_harms(0, 1, 0);
   console.log("AUSP harms count: " + cnt_harms_ausp);
 
-  var cnt_harms_spen = spen.get_cnt_harms(0, 1, 1);
+  var cnt_harms_spen = spen.get_cnt_harms(0, 1, 0);
   console.log("SPEN harms count: " + cnt_harms_spen);
 
   var is_decay = spen.is_harms_decay(0);

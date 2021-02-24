@@ -1,5 +1,5 @@
 import "service.js";
-import "rolling_bearing.js";
+import "ballscrew.js";
 
 function init() {
   // Функция инициализации
@@ -9,7 +9,7 @@ function init() {
 
   // Добавление колорбокса. первый параметр - цвет, второй - текст
   add_color(0xffff1e00, "Fтк");
-  add_color(0xff00ff55, "±Fc");
+  add_color(0xff00ff55, "±Fcage");
 
   // Задаем цвета спектров
   ausp.set_color(0xff006aff);

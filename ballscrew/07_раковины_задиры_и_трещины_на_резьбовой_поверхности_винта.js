@@ -1,16 +1,16 @@
 import "service.js";
-import "rolling_bearing.js";
+import "ballscrew.js";
 
 function init() {
   // Функция инициализации
 
   // Задание имени дефекта
-  set_name("Задиры и трещины на внутреннем кольце");
+  set_name("Раковины, задиры и трещины резьбовой поверхности винта");
 
   // Добавление колорбокса. первый параметр - цвет, второй - текст
-  add_color(0xffff00ff, "Fвр");
-  add_color(0xff00fffb, "Fв");
-  add_color(0xff00fffb, "±Fвр");
+  add_color(0xffff00ff, "Fврв");
+  add_color(0xff00fffb, "Fвнт");
+  add_color(0xff00fffb, "±Fврв");
 
   // Задаем цвета спектров
   ausp.set_color(0xfffbff00);
@@ -38,8 +38,8 @@ function display() {
   // 3 - кол-во усреднений,
   // 4 - сглаживание желтой линии
 
-  ausp.set_options(f_inner * 7, (f_inner * 7) / (freq / 5), 5, 25);
-  spen.set_options(f_inner * 7, (f_inner * 7) / (freq / 5), 5, 75);
+  ausp.set_options(f_vnt * 7, (f_vnt * 7) / (freq / 5), 5, 25);
+  spen.set_options(f_vnt * 7, (f_vnt * 7) / (freq / 5), 5, 75);
 
   ausp_hf.set_options(10000, 1000, 5, 25);
   spen_hf.set_options(10000, 1000, 5, 75);
@@ -59,7 +59,7 @@ function display() {
   for (i = 1; i <= 8; i++) ausp.harms[0].add(i * freq, 1, 1, 0);
   for (i = 1; i <= 5; i++) spen.harms[0].add(i * freq, 1, 1, 0);
 
-  for (i = 1; i <= 4; i++) ausp.harms[1].add(i * f_inner, 1, 1, 1);
+  for (i = 1; i <= 4; i++) ausp.harms[1].add(i * f_vnt, 1, 1, 1);
 
   // Добавление гармоник на спектр огибающей. harms_spen - список отображаемых на спектре огибающей гармоник.
   // 1 - несущая частота
@@ -71,8 +71,9 @@ function display() {
   // 7 - индекс цвета несущей
   // 8 - ширина модулирующей
   // 9 - индекс цвета модулирущей
+
   for (i = 1; i <= 3; i++)
-    spen.harms[1].add_modulated(i * f_inner, 1, freq, 1, 1, 3, 1, 1, 2);
+    spen.harms[1].add_modulated(i * f_vnt, 1, freq, 1, 1, 3, 1, 1, 2);
 
   // Задаем диапазоны поиска горбов.
   // первые два параметра - частотный диапазон,

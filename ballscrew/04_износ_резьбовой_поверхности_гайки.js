@@ -1,14 +1,14 @@
 import "service.js";
-import "rolling_bearing.js";
+import "ballscrew.js";
 
 function init() {
   // Функция инициализации
 
   // Задание имени дефекта
-  set_name("Износ беговой дорожки наружного кольца");
+  set_name("Износ резьбовой поверхности гайки");
 
   // Добавление колорбокса. первый параметр - цвет, второй - текст
-  add_color(0xff004dff, "Fн");
+  add_color(0xff004dff, "Fгк");
 
   // Задаем цвета спектров
   ausp.set_color(0xffff0867);
@@ -30,8 +30,8 @@ function display() {
   // 3 - кол-во усреднений,
   // 4 - сглаживание желтой линии
 
-  ausp.set_options(f_outer * 7, (f_outer * 7) / (freq / 4), 5, 25);
-  spen.set_options(f_outer * 7, (f_outer * 7) / (freq / 4), 5, 75);
+  ausp.set_options(f_nut * 7, (f_nut * 7) / (freq / 4), 5, 25);
+  spen.set_options(f_nut * 7, (f_nut * 7) / (freq / 4), 5, 75);
 
   // Задаем частоту фильра спектра огибающей
   var fc = 2000 * math.sqrt(freq);
@@ -45,8 +45,8 @@ function display() {
   // freq - частота вращения,
   // [индек] - индекс массива набора гармоник.
 
-  for (i = 1; i <= 3; i++) ausp.harms[0].add(i * f_outer, 1, 1, 0);
-  for (i = 1; i <= 3; i++) spen.harms[0].add(i * f_outer, 1, 1, 0);
+  for (i = 1; i <= 3; i++) ausp.harms[0].add(i * f_nut, 1, 1, 0);
+  for (i = 1; i <= 3; i++) spen.harms[0].add(i * f_nut, 1, 1, 0);
 
   ausp.harms[0].set_decay(-0.01);
   spen.harms[0].set_decay(-0.01);

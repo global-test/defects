@@ -37,8 +37,8 @@ function display() {
   // 3 - кол-во усреднений,
   // 4 - сглаживание желтой линии
 
-  ausp.set_options(freq * 20, (freq * 20) / (f_separ / 8), 5, 25);
-  spen.set_options(freq * 20, (freq * 20) / (f_separ / 8), 5, 75);
+  ausp.set_options(freq * 20, (freq * 20) / (f_cage / 8), 5, 25);
+  spen.set_options(freq * 20, (freq * 20) / (f_cage / 8), 5, 75);
 
   ausp_hf.set_options(10000, 1000, 5, 25);
   spen_hf.set_options(10000, 1000, 5, 75);
@@ -55,11 +55,11 @@ function display() {
   // freq - частота вращени€,
   // [индек] - индекс массива набора гармоник.
 
-  for (i = 1; i <= 8; i++) ausp.harms[0].add(i * f_separ, 1, 1, 0);
-  for (i = 1; i <= 8; i++) spen.harms[0].add(i * f_separ, 1, 1, 0);
+  for (i = 1; i <= 8; i++) ausp.harms[0].add(i * f_cage, 1, 1, 0);
+  for (i = 1; i <= 8; i++) spen.harms[0].add(i * f_cage, 1, 1, 0);
 
-  for (i = 1; i <= 8; i++) ausp.harms[1].add(i * (freq - f_separ), 1, 1, 1);
-  for (i = 1; i <= 8; i++) spen.harms[1].add(i * (freq - f_separ), 1, 1, 1);
+  for (i = 1; i <= 8; i++) ausp.harms[1].add(i * (freq - f_cage), 1, 1, 1);
+  for (i = 1; i <= 8; i++) spen.harms[1].add(i * (freq - f_cage), 1, 1, 1);
 
   // «адаем диапазоны поиска горбов.
   // первые два параметра - частотный диапазон,

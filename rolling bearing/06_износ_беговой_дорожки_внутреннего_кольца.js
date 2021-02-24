@@ -56,10 +56,10 @@ function display() {
   // [индек] - индекс массива набора гармоник.
 
   for (i = 1; i <= 8; i++) ausp.harms[0].add(i * freq, 1, 1, 0);
-  for (i = 1; i <= 8; i++) spen.harms[0].add(i * freq, 1, 1, 0);
+  for (i = 1; i <= 6; i++) spen.harms[0].add(i * freq, 1, 1, 0);
 
-  for (i = 1; i <= 3; i++) ausp.harms[1].add(i * f_inner, 1, 1, 1);
-  for (i = 1; i <= 3; i++) spen.harms[1].add(i * f_inner, 1, 1, 1);
+  for (i = 1; i <= 4; i++) ausp.harms[1].add(i * f_inner, 1, 1, 1);
+  for (i = 1; i <= 4; i++) spen.harms[1].add(i * f_inner, 1, 1, 1);
 
   spen.harms[0].set_decay(-0.01);
 
@@ -97,19 +97,19 @@ function diagnostic() {
   var spen_hump = spen_hf.get_max_hump(0);
 
   if (signal.is_magnetic()) {
-    if (cnt_harms_ausp >= 3 && cnt_harms_spen >= 3 && is_decay) {
+    if (cnt_harms_ausp >= 2 && cnt_harms_spen >= 2 && is_decay) {
       // реализация логики подтверждения дефекта
       // true - дефект обнаружен
       // false - дефект не обнаружен
       is_defect = true;
-    } else if (cnt_harms_ausp >= 3 && cnt_harms_spen >= 2 && is_decay) {
+    } else if (cnt_harms_ausp == 1 && cnt_harms_spen == 1) {
       is_defect = true;
       comment = "повторить измерение"; //добавлен комментарий
     }
   } else {
     if (
-      cnt_harms_ausp >= 3 &&
-      cnt_harms_spen >= 3 &&
+      cnt_harms_ausp >= 2 &&
+      cnt_harms_spen >= 2 &&
       is_decay &&
       (ausp_hump > 3 || spen_hump > 3)
     ) {
@@ -117,7 +117,7 @@ function diagnostic() {
       // true - дефект обнаружен
       // false - дефект не обнаружен
       is_defect = true;
-    } else if (cnt_harms_ausp >= 3 && cnt_harms_spen >= 2 && is_decay) {
+    } else if (cnt_harms_ausp == 1 && cnt_harms_spen == 1) {
       is_defect = true;
       comment = "повторить измерение"; //добавлен комментарий
     }
