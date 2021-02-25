@@ -4,10 +4,13 @@ function init()																			//функция инициализации
 	add_color(0xff00ff00, "Fвнт");														//добавлнение колорбокса. первый параметр - цвет, второй - текст
 
 	ausp.set_color(0xffff0867);                     //задаем цвет спектра
-    ausp.set_harms_series_count(1);     //задаем кол-во наборов гармоник для автостпектра
+	ausp.set_harms_series_count(1);     //задаем кол-во наборов гармоник для автостпектра
 
 	spen.set_color(0xffd5ff00);
 	spen.set_harms_series_count(1);
+
+	ausp_hf.set_enabled(false);
+	spen_hf.set_enabled(false);
 }
 
 function display()																			//функция отображения
@@ -16,6 +19,7 @@ function display()																			//функция отображения
     console.log("### display ###");
     console.log("### " + signal.get_name() + " ###");
     console.log("is_magnetic: " + signal.is_magnetic());
+    console.log("type: " + parent.get_type());
 
     console.log("freq: " + freq);
 
