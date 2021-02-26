@@ -1,4 +1,4 @@
-import "rolling_bearing/default/02.js";
+import "sliding_bearing/default/04.js";
 
 function init() {
   default_init();

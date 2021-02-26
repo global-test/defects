@@ -1,4 +1,4 @@
-import "rolling_bearing/default/02.js";
+import "sliding_bearing/default/08.js";
 
 function init() {
   default_init();
@@ -9,5 +9,5 @@ function display() {
 }
 
 function diagnostic() {
-  default_diagnostic();
+  default_diagnotic();
 }
