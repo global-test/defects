@@ -1,4 +1,13 @@
 
+dmitry 0:22
+для подсчета гармоник вида: (Fz ± Fвр2)±2 >= 1г
+вводим функцию: get_cnt_harms(int idx, unsigned int from, int fails, int cnt_mod, bool both_sides)
+первые три параметра - аналогично get_cnt_harms(int idx, unsigned int from, int fails);
+четвертый - необходимое кол-во присутствующих модуляций;
+пятый - истина - с двух сторон, ложь - достаточно с одной;
+
+добавлена get_cnt_harms(int idx, unsigned int from, int fails, int cnt_mod, bool both_sides)
+
 отключение отображения спектров. работает только при запуске. при принудительно init не работает. как вариант: принудительный init и передобавление сигналов.
 	ausp_hf.set_enabled(false);
 	spen_hf.set_enabled(false);
